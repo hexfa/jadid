@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>نرم افزار وام فامیلی</title>
+<script src="javascript/jquery.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/prefixed-demo.css" />
+
+<script src="javascript/report.json"></script>
+<script src="javascript/cordova.js"></script>
+<script src="javascript/javascript.js"></script>
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<link href="style/style.css" rel="stylesheet">
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+
+<script>
+function reload_page()
+{
+window.location.assign("ghoreh.html");	
+}
+</script>
+
+</head> 
+<body id="body" style="-webkit-user-select:none; -moz-user-select:none; -o-user-select:none; " onLoad="load_ghore();"> 
+
+<div data-role="page" id="page" style="height:100%;">
+	
+	
+		
+     
+     <div class="main1">
+      
+      				 <menu class="menu">
+                        <li>
+                          <a class="fa fa-home" onClick="home1();" style="cursor:pointer;"></a>
+                        </li>
+                        <li>
+                          <a class="fa fa-users" onClick="list();" style="cursor:pointer;"></a>
+                        </li>
+                        <li>
+                          <a class="fa fa-money" onClick="variz();" style="cursor:pointer;"></a>
+                        </li>
+                        <li>
+                          <a class="fa fa-random" onClick="ghoreh();" style="cursor:pointer;"></a>
+                        </li>
+                        <li>
+                          <a class="fa fa-sign-out" onClick="exit();" style="cursor:pointer;"></a>
+                        </li>
+                      </menu>
+                      <div id="mm2" class="content-wrapper">
+                     
+                        <a onclick="document.getElementById('body').classList.toggle('open');mm2();" class="fa fa-bars menu-btn" style="cursor:pointer;"></a>
+                     
+                  </div>
+      
+      
+      				
+               
+   </div>
+
+ 		
+	
+<div name="main" id="countt2" style="position:absolute; width:88%; height:97%; color:#00000; background-color:#ccc; left:5px; top:5px; z-index:9; border-radius:5px; direction:rtl;" >
+<center>
+<br>
+<table id="tab_list" border="1" style="width:80%;">
+<tr><th>نام</th><th>سهم</th><th>وام</th><th>پرداخت ها</th></tr>
+</table>
+
+<br>
+<div id="ghore_keshii" type="button" class="bt"  onClick="ghore_keshi();" style="font-size:14px;">قرعه کشی</div>
+<br>
+</center>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

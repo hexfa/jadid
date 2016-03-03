@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>نرم افزار وام فامیلی</title>
+<script src="javascript/jquery.js"></script>
+<script src="javascript/report.json"></script>
+<script src="javascript/cordova.js"></script>
+<script src="javascript/javascript.js"></script>
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<link href="style/style.css" rel="stylesheet">
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+
+
+
+</head> 
+<body style="-webkit-user-select:none; -moz-user-select:none; -o-user-select:none;" > 
+
+<div data-role="page" id="page" style="height:100%;">
+	<div data-role="header">
+		<h1>وام فامیلی</h1>
+	</div>
+	<div data-role="content" style="height:80%;">	
+		
+   <div class="page-1">     
+     <div class="main-index">
+      <div class="bar-up">
+         <div class="fr-up" id="sabt-nam" style="background-image:url(images/registrer.png);"></div>
+           <div class="spacer1"></div>
+      <div class="fr-up" id="vorood" style="left:150px; background-image:url(images/login.png);background-size:50px 100%;"></div>
+               
+               <div class="login" id="login">
+              	<div class="login-in">
+             	 <input type="email" id="email-login" style="text-align:center" placeholder="ایمیل">
+              
+              	 <input type="password" id="pass-login" style="text-align:center; margin-top:5%; margin-bottom:10%;" placeholder="رمز عبور">
+              
+                 
+             	 <input type="button" id="bt-login" value="ورود" style="background-color: #E52B50;" onClick="logi();">
+              
+            	 
+              
+              	 <a id="remmber" href="#popup" data-transition="pop" style="position:absolute; font-size:14px; font-weight:normal; color:#eee; margin-left:30%; margin-top:2%;">فراموشی رمز عبور</a>
+                 
+                 </div>
+               </div>
+               
+               
+               <div class="register" id="register">
+               	<div class="register-in">
+               		<input type="text" id="reg-name" style="text-align:center; margin-bottom:3%;" placeholder="نام و نام خانوادگی">
+                    
+              		<input type="email" id="reg-email" style="text-align:center; margin-bottom:3%;" placeholder="ایمیل">
+              
+              	 <input type="password" id="reg-pass1" style="text-align:center; margin-bottom:3%;" placeholder="رمز عبور">
+                 
+                 <input type="password" id="reg-pass2" style="text-align:center; margin-bottom:6%;" placeholder="تکرار رمز عبور">
+                 
+              
+             	 <input type="button" id="bt-reg" style="z-index:10;" value="ثبت نام" onClick="reg()">
+              
+            	 </div>
+                 
+               </div>
+               
+                </div>
+                </div>
+        </div>
+          
+        		
+	</div>
+ 		
+	
+</div>
+
+
+<div id="popup" data-role="dialog" style="height:100%;">
+	<div data-role="header"><h3>بازیابی رمز عبور</h3></div>
+           <div data-role="content">
+                <div id="index_inner_box" class="index_inner_box">
+                	<div class="register-in">
+                <input id="email-remmber" type="email" style="top:2%; font-size:15px; direction:ltr;" placeholder="ایمیل خود را وارد کنید" >
+              		<input type="button" id="bt-remmber" value="ارسال رمز" style="" onClick="remmber();">
+             		</div>
+                 </div>
+               </div>
+          
+       </div>
+
+
+
+</body>
+</html>

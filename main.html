@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>نرم افزار وام فامیلی</title>
+<script src="javascript/jquery.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/prefixed-demo.css" />
+
+<script src="javascript/report.json"></script>
+<script src="javascript/cordova.js"></script>
+<script src="javascript/javascript.js"></script>
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<link href="style/style.css" rel="stylesheet">
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+
+<script>
+texts=new Array('با سلام به نرم افزار وام فامیلی خوش آمدید');
+blink='<blink>|</blink>';
+div_id='moisrex_ID_SLIDE';
+iS=0;
+texti=0;
+forsettime=0;
+d=Math.floor(Math.random()*texts[texti].length);
+function MoisreX_Text_SlidE(e){
+	setTime=200;
+	text=texts[texti];
+	x=text;
+	x=text.substring(0,iS+1);
+	l=text.substring(0,iS+1);
+	if(iS==d){
+		x=x+String.fromCharCode(x.charCodeAt(d)^Math.floor(Math.random()*5));
+		document.getElementById(div_id).innerHTML=x+blink;
+		forsettime=1;
+		setTimeout(function(){
+			x=l;
+			varset=document.getElementById(div_id).innerHTML=x+blink;
+		},setTime);
+	}
+	else{
+		document.getElementById(div_id).innerHTML=x+blink;
+	}
+	iS++;
+	k=(Math.random()*200)+50;
+	setTimes=(forsettime==1)?k+500:k;
+	if(iS==text.length){
+		iS=0;
+		texti++;
+		if(texti==texts.length){
+			texti=0;
+		}
+		d=Math.floor(Math.random()*texts[texti].length);
+		setTimeout(MoisreX_Text_SlidE,60000);
+	}
+	else{
+		setTimeout(MoisreX_Text_SlidE,setTimes);
+		forsettime=0;
+	}
+}
+window.onload=MoisreX_Text_SlidE;
+</script>
+
+</head> 
+<body id="body" style="-webkit-user-select:none; -moz-user-select:none; -o-user-select:none; " onLoad="load_main();"> 
+
+<div data-role="page" id="page" style="height:100%;">
+	
+	
+		
+     
+     <div class="main1">
+      
+      				 <menu class="menu">
+                        <li>
+                          <a class="fa fa-home" onClick="home1();" style="cursor:pointer;"></a>
+                        </li>
+                        <li>
+                          <a class="fa fa-users" onClick="list();" style="cursor:pointer;"></a>
+                        </li>
+                         <li>
+                          <a class="fa fa-sign-out" onClick="exit();" style="cursor:pointer;"></a>
+                        </li>
+                      </menu>
+                      <div id="mm" class="content-wrapper">
+                     
+                        <a onclick="document.getElementById('body').classList.toggle('open');mm();" class="fa fa-bars menu-btn" style="cursor:pointer;"></a>
+                     
+                  </div>
+      
+      
+      				
+               
+   </div>
+
+ 		
+	
+<div name="main" id="countt" style="position:absolute; width:88%; height:97%; color:#00000; background-color:#ccc; left:5px; top:5px; z-index:9; border-radius:5px; direction:rtl;" >
+
+<center>
+<div id="moisrex_ID_SLIDE" style="font-weight:bold; font-size:14px;"></div>
+</center>
+<br>
+1- ابتدا مبلغ صندوق را وارد کنید
+<br>
+2- تعداد افرادی که می خواهند مشارکت کنند را وارد کنید
+<br>
+3- پس از اطمینان کلید ایجاد صندوق را بزنید
+<br>
+4- اگر صندوق قبلا ایجاد شده باشد ابتدا باید صندوق قبلی تسویه و بسته شود
+<br>
+<br>
+<br>
+<center>
+<input id="sandogh" type="text" placeholder="مبلغ صندوق به تومان" style="text-align:center;">
+<br>
+<input id="tedad" type="text" placeholder="تعداد افراد" style="text-align:center;">
+<br>
+<div id="ijad" type="button" class="bt"  onClick="sandogh();">ایجاد صندوق</div>
+</center>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
